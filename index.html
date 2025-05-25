@@ -1,114 +1,109 @@
 <!DOCTYPE html>
-<html lang="zh-Hant">
+<html lang="zh-TW">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>曹亦霆的自我介紹</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>曹亦霆的網站</title>
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #0e0e0e;
-      color: #e0e0e0;
+      font-family: "Segoe UI", sans-serif;
+      display: flex;
+      background: #f5f5f5;
     }
-    header {
-      background-color: #121212;
-      padding: 60px 20px;
-      text-align: center;
+
+    .sidebar {
+      width: 220px;
+      background-color: #007acc;
+      color: white;
+      height: 100vh;
+      padding: 2rem 1rem;
+      position: fixed;
     }
-    header img {
-      width: 150px;
-      height: 150px;
+
+    .sidebar img {
+      width: 100px;
+      height: 100px;
       border-radius: 50%;
-      object-fit: cover;
-      border: 3px solid #00bfff;
-      margin-bottom: 20px;
+      border: 3px solid white;
+      margin-bottom: 1rem;
     }
-    header h1 {
-      font-size: 3rem;
-      color: #00bfff;
+
+    .sidebar h2 {
+      margin: 0.5rem 0;
     }
-    header p {
-      font-size: 1.2rem;
-      color: #aaa;
-    }
-    section {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
-    h2 {
-      border-left: 4px solid #00bfff;
-      padding-left: 12px;
-      margin-bottom: 16px;
-    }
-    .card {
-      background-color: #1e1e1e;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0, 191, 255, 0.2);
-      margin-bottom: 20px;
-    }
-    a {
-      color: #00bfff;
+
+    .sidebar nav a {
+      display: block;
+      color: white;
       text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    .link-buttons a {
-      display: inline-block;
-      margin-right: 10px;
-      padding: 8px 16px;
-      background-color: #00bfff;
-      color: #000;
-      border-radius: 5px;
+      margin: 1rem 0;
       font-weight: bold;
     }
+
+    .sidebar nav a:hover {
+      text-decoration: underline;
+    }
+
+    .main {
+      margin-left: 240px;
+      padding: 2rem;
+      flex-grow: 1;
+    }
+
+    .tag {
+      display: inline-block;
+      background: #007acc;
+      color: white;
+      padding: 0.3rem 0.7rem;
+      border-radius: 20px;
+      margin: 0.2rem;
+      font-size: 0.9rem;
+    }
+
     footer {
+      margin-top: 3rem;
+      font-size: 0.8rem;
+      color: #666;
       text-align: center;
-      padding: 20px;
-      color: #777;
-      border-top: 1px solid #333;
     }
   </style>
 </head>
 <body>
-  <header>
-    <!-- 預留大頭貼位置 -->
-    <img src="your-photo.jpg" alt="曹亦霆的大頭貼" />
-    <h1>你好，我是曹亦霆</h1>
-    <p>資訊系學生，熱愛學習與創新</p>
-  </header>
+  <div class="sidebar">
+    <img src="https://via.placeholder.com/100" alt="大頭貼" />
+    <h2>曹亦霆</h2>
+    <p>資訊系學生</p>
+    <nav>
+      <a href="#about">關於我</a>
+      <a href="#skills">技能</a>
+      <a href="#contact">聯絡方式</a>
+    </nav>
+  </div>
 
-  <section>
-    <h2>關於我</h2>
-    <div class="card">
-      <p>目前就讀資訊相關科系，對程式設計與邏輯運算非常感興趣。</p>
-      <p>擅長使用 C 語言進行基礎程式開發，並持續學習更多技術。</p>
-    </div>
+  <div class="main">
+    <section id="about">
+      <h2>關於我</h2>
+      <p>你好，我是曹亦霆，目前學習資訊相關技能，會使用 C、C++、HTML、CSS，參與過資訊能力競賽與 WRO 機器人競賽。</p>
+    </section>
 
-    <h2>經歷與競賽</h2>
-    <div class="card">
-      <ul>
-        <li>參加過 <strong>資訊能力競賽</strong></li>
-        <li>參加過 <strong>WRO 世界機器人奧林匹亞競賽</strong></li>
-      </ul>
-    </div>
+    <section id="skills">
+      <h2>技能</h2>
+      <span class="tag">C</span>
+      <span class="tag">C++</span>
+      <span class="tag">HTML</span>
+      <span class="tag">CSS</span>
+      <span class="tag">數位邏輯</span>
+    </section>
 
-    <h2>聯絡我</h2>
-    <div class="card">
+    <section id="contact">
+      <h2>聯絡方式</h2>
       <p>Email: <a href="mailto:daniel20070724@gmail.com">daniel20070724@gmail.com</a></p>
-      <div class="link-buttons">
-        <!-- 預留連結按鈕區塊（例如 GitHub、IG） -->
-        <a href="#">GitHub</a>
-        <a href="#">IG</a>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <footer>
-    <p>© 2025 曹亦霆 All rights reserved.</p>
-  </footer>
+    <footer>
+      &copy; 2025 曹亦霆
+    </footer>
+  </div>
 </body>
 </html>
