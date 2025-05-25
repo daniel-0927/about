@@ -8,7 +8,6 @@
     body {
       margin: 0;
       font-family: "Segoe UI", sans-serif;
-      display: flex;
       background: #f5f5f5;
     }
 
@@ -19,6 +18,13 @@
       height: 100vh;
       padding: 2rem 1rem;
       position: fixed;
+      left: 0;
+      top: 0;
+      transition: transform 0.3s ease;
+    }
+
+    .sidebar.hidden {
+      transform: translateX(-100%);
     }
 
     .sidebar img {
@@ -48,7 +54,26 @@
     .main {
       margin-left: 240px;
       padding: 2rem;
-      flex-grow: 1;
+      transition: margin-left 0.3s ease;
+    }
+
+    .main.full {
+      margin-left: 0;
+    }
+
+    .hamburger {
+      display: none;
+      position: fixed;
+      top: 1rem;
+      left: 1rem;
+      background: #007acc;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      font-size: 1.2rem;
+      z-index: 999;
+      cursor: pointer;
+      border-radius: 5px;
     }
 
     .tag {
@@ -67,10 +92,31 @@
       color: #666;
       text-align: center;
     }
+
+    @media (max-width: 768px) {
+      .hamburger {
+        display: block;
+      }
+
+      .sidebar {
+        transform: translateX(-100%);
+      }
+
+      .sidebar.show {
+        transform: translateX(0);
+      }
+
+      .main {
+        margin-left: 0;
+      }
+    }
   </style>
 </head>
 <body>
-  <div class="sidebar">
+
+  <button class="hamburger" onclick="toggleSidebar()">☰ 選單</button>
+
+  <div class="sidebar" id="sidebar">
     <img src="https://via.placeholder.com/100" alt="大頭貼" />
     <h2>曹亦霆</h2>
     <p>資訊系學生</p>
@@ -81,7 +127,7 @@
     </nav>
   </div>
 
-  <div class="main">
+  <div class="main" id="main">
     <section id="about">
       <h2>關於我</h2>
       <p>你好，我是曹亦霆，目前學習資訊相關技能，會使用 C、C++、HTML、CSS，參與過資訊能力競賽與 WRO 機器人競賽。</p>
@@ -105,5 +151,13 @@
       &copy; 2025 曹亦霆
     </footer>
   </div>
+
+  <script>
+    function toggleSidebar() {
+      const sidebar = document.getElementById("sidebar");
+      sidebar.classList.toggle("show");
+    }
+  </script>
+
 </body>
 </html>
