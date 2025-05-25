@@ -2,145 +2,32 @@
 <html lang="zh-TW">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>曹亦霆的網站</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: "Segoe UI", sans-serif;
-      background: #f5f5f5;
-    }
-
-    .sidebar {
-      width: 220px;
-      background-color: #007acc;
-      color: white;
-      height: 100vh;
-      padding: 2rem 1rem;
-      position: fixed;
-      left: 0;
-      top: 0;
-      transition: transform 0.3s ease;
-    }
-
-    .sidebar.hidden {
-      transform: translateX(-100%);
-    }
-
-    .sidebar img {
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      border: 3px solid white;
-      margin-bottom: 1rem;
-    }
-
-    .sidebar h2 {
-      margin: 0.5rem 0;
-    }
-
-    .sidebar nav a {
-      display: block;
-      color: white;
-      text-decoration: none;
-      margin: 1rem 0;
-      font-weight: bold;
-    }
-
-    .sidebar nav a:hover {
-      text-decoration: underline;
-    }
-
-    .main {
-      margin-left: 240px;
-      padding: 2rem;
-      transition: margin-left 0.3s ease;
-    }
-
-    .main.full {
-      margin-left: 0;
-    }
-
-    .hamburger {
-      display: none;
-      position: fixed;
-      top: 1rem;
-      left: 1rem;
-      background: #007acc;
-      color: white;
-      border: none;
-      padding: 0.5rem 1rem;
-      font-size: 1.2rem;
-      z-index: 999;
-      cursor: pointer;
-      border-radius: 5px;
-    }
-
-    .tag {
-      display: inline-block;
-      background: #007acc;
-      color: white;
-      padding: 0.3rem 0.7rem;
-      border-radius: 20px;
-      margin: 0.2rem;
-      font-size: 0.9rem;
-    }
-
-    .project {
-      background: white;
-      padding: 1rem;
-      margin-bottom: 1rem;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-
-    footer {
-      margin-top: 3rem;
-      font-size: 0.8rem;
-      color: #666;
-      text-align: center;
-    }
-
-    @media (max-width: 768px) {
-      .hamburger {
-        display: block;
-      }
-
-      .sidebar {
-        transform: translateX(-100%);
-      }
-
-      .sidebar.show {
-        transform: translateX(0);
-      }
-
-      .main {
-        margin-left: 0;
-        padding: 1rem;
-      }
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="嘗試製作的網站" />
+  <meta name="author" content="曹亦霆" />
+  <title>個人網站</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
   <button class="hamburger" onclick="toggleSidebar()">☰ 選單</button>
 
-  <div class="sidebar" id="sidebar">
-    <img src="https://via.placeholder.com/100" alt="目前未放" />
-    <h2>曹亦霆</h2>
+  <header id="sidebar">
+    <img src="1727495160158.jpg" alt="大頭照" />
+    <h1>曹亦霆</h1>
     <p>特選生</p>
     <nav>
-      <a href="#about">本網站意義</a>
+      <a href="#about">網站意義</a>
       <a href="#skills">技能</a>
       <a href="#projects">經歷</a>
       <a href="#contact">聯絡方式</a>
     </nav>
-  </div>
+  </header>
 
-  <div class="main" id="main">
+  <main id="main">
     <section id="about">
       <h2>本網站意義</h2>
-      <p>正在嘗試架設網站，所以說如果你看的到那就代表我成功了</p>
+      <p>這是我嘗試架設的第一個網站，如果你能看到這段文字，就代表我成功了！</p>
     </section>
 
     <section id="skills">
@@ -150,6 +37,7 @@
       <span class="tag">HTML</span>
       <span class="tag">CSS</span>
       <span class="tag">數位邏輯</span>
+      <p>這些是我目前學習的技能，仍在持續精進中。</p>
     </section>
 
     <section id="projects">
@@ -157,53 +45,46 @@
 
       <div class="project">
         <h3>APCS</h3>
-        <p>觀念4實作2</p>
+        <p>觀念 4，實作 2</p>
       </div>
 
       <div class="project">
         <h3>國際運算思維挑戰賽</h3>
-        <p>200分PR92</p>
+        <p>200 分 PR92</p>
       </div>
 
       <div class="project">
-        <h3>WROWRO國際奧林匹亞智能機器人MARC</h3>
-        <p>北區冠軍</p>
-        <p>全國佳作</p>
+        <h3>WRO/WRO 國際奧林匹亞智能機器人 MARC</h3>
+        <p>北區冠軍，全國佳作</p>
       </div>
 
       <div class="project">
         <h3>資訊學科能力競賽 校內初賽</h3>
-        <p>第一</p>
+        <p>第一名</p>
       </div>
 
       <div class="project">
-        <h3>資訊學科能力競賽 新北區複賽複賽</h3>
+        <h3>資訊學科能力競賽 新北區複賽</h3>
         <p>佳作</p>
       </div>
 
       <div class="project">
         <h3>自我介紹網站</h3>
-        <p>使用 HTML 和 CSS 製作的個人網站</p>
-        <p>嘗試中，排版亂</p>
+        <p>使用 HTML 和 CSS 製作的個人網站，正在學習與優化中。</p>
       </div>
     </section>
 
     <section id="contact">
       <h2>聯絡方式</h2>
-      <p>Email: <a href="mailto:daniel20070724@gmail.com">目前不想放</a></p>
+      <p>Email：<span style="color: #999;">目前不公開</span></p>
     </section>
 
     <footer>
       &copy; 2025 曹亦霆
     </footer>
-  </div>
+  </main>
 
-  <script>
-    function toggleSidebar() {
-      const sidebar = document.getElementById("sidebar");
-      sidebar.classList.toggle("show");
-    }
-  </script>
+  <script src="script.js"></script>
 
 </body>
 </html>
