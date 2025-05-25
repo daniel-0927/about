@@ -86,6 +86,14 @@
       font-size: 0.9rem;
     }
 
+    .project {
+      background: white;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
     footer {
       margin-top: 3rem;
       font-size: 0.8rem;
@@ -108,6 +116,7 @@
 
       .main {
         margin-left: 0;
+        padding: 1rem;
       }
     }
   </style>
@@ -117,20 +126,21 @@
   <button class="hamburger" onclick="toggleSidebar()">☰ 選單</button>
 
   <div class="sidebar" id="sidebar">
-    <img src="https://via.placeholder.com/100" alt="大頭貼" />
+    <img src="https://via.placeholder.com/100" alt="目前未放" />
     <h2>曹亦霆</h2>
     <p>資訊系學生</p>
     <nav>
-      <a href="#about">關於我</a>
+      <a href="#about">本網站意義</a>
       <a href="#skills">技能</a>
+      <a href="#projects">經歷</a>
       <a href="#contact">聯絡方式</a>
     </nav>
   </div>
 
   <div class="main" id="main">
     <section id="about">
-      <h2>關於我</h2>
-      <p>你好，我是曹亦霆，目前學習資訊相關技能，會使用 C、C++、HTML、CSS，參與過資訊能力競賽與 WRO 機器人競賽。</p>
+      <h2>本網站意義</h2>
+      <p>正在嘗試架設網站，所以如果你看的到那就代表我成功了</p>
     </section>
 
     <section id="skills">
@@ -142,9 +152,45 @@
       <span class="tag">數位邏輯</span>
     </section>
 
+    <section id="projects">
+      <h2>經歷</h2>
+
+      <div class="project">
+        <h3>APCS</h3>
+        <p>觀念4實作2</p>
+      </div>
+
+      <div class="project">
+        <h3>國際運算思維挑戰賽</h3>
+        <p>200分PR92</p>
+      </div>
+
+      <div class="project">
+        <h3>WROWRO國際奧林匹亞智能機器人MARC</h3>
+        <p>北區冠軍</p>
+        <p>全國佳作</p>
+      </div>
+
+      <div class="project">
+        <h3>資訊學科能力競賽 校內初賽</h3>
+        <p>第一</p>
+      </div>
+
+      <div class="project">
+        <h3>資訊學科能力競賽 新北區複賽複賽</h3>
+        <p>佳作</p>
+      </div>
+
+      <div class="project">
+        <h3>自我介紹網站</h3>
+        <p>使用 HTML 和 CSS 製作的個人網站</p>
+        <p>嘗試中，排版亂</p>
+      </div>
+    </section>
+
     <section id="contact">
       <h2>聯絡方式</h2>
-      <p>Email: <a href="mailto:daniel20070724@gmail.com">daniel20070724@gmail.com</a></p>
+      <p>Email: <a href="mailto:daniel20070724@gmail.com">目前不想放</a></p>
     </section>
 
     <footer>
